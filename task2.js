@@ -4,16 +4,14 @@ function format(data, type) {
     // Ваш код
 }
 
-var originFormat = format;
-
-format("1", "number");
-console.log(format()); // 1
+console.log(format("1", "number")); // 1
+console.log(format("1")); // 1
 console.log(typeof format()); // "number"
 
-originFormat("Hello", "boolean");
-console.log(format()); // true
+console.log(format("Hello", "boolean")); // true
+console.log(format(1)); // true
 console.log(typeof format()); // "boolean"
 
-originFormat(true, "string");
-console.log(format()); // "true"
+console.log(format(true, "string")); // "true"
+console.log(format(1)); // "1"
 console.log(typeof format()); // "string"
